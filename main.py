@@ -1,20 +1,24 @@
 
-x = float(input("Введіть перше число: "))
-y = float(input("Введіть друге число: "))
-z = float(input("Введіть третє число: "))
+meters = float(input("Введіть кількість метрів: "))
 
 
-operation = input("Виберіть операцію: 1 - максимум, 2 - мінімум, 3 - середньоарифметичне: ")
+units = input("Виберіть одиниці, в які потрібно конвертувати: 1 - милі, 2 - дюйми, 3 - ярди: ")
 
 
-if operation == "1":
-    result = max(x, y, z)
-elif operation == "2":
-    result = min(x, y, z)
-elif operation == "3":
-    result = (x + y + z) / 3
+if units == "1":
+    miles = meters * 0.000621371192
+    print("Кількість миль:", miles)
+
+
+elif units == "2":
+    inches = meters * 39.3701
+    print("Кількість дюймів:", inches)
+
+
+elif units == "3":
+    yards = meters * 1.0936133
+    print("Кількість ярдів:", yards)
+
 else:
-    print("Неправильний вибір операції!")
+    print("Неправильний вибір одиниць!")
 
-
-print("Результат:", result)
